@@ -1,0 +1,112 @@
+canvas {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
+.canvas-container {
+  position: relative;
+}
+
+canvas {
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.overlay h1,
+.overlay p {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.overlay h1 {
+  font-size: 2em;
+}
+
+.overlay p {
+  font-size: 1em;
+}
+
+.card-container {
+  margin-top: 24%;
+  margin-bottom: 20%;
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 16px; /* Adjust the gap between cards as needed */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.horizontal-card {
+  display: flex;
+  flex-direction: column;
+  width: 300px; /* Set a fixed width for the cards */
+  height: auto; /* Allow the height to adjust based on content */
+  background-color: black;
+  color: aliceblue;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+mat-card-title {
+  font-family: "Times New Roman", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+mat-card-subtitle {
+  font-family: "Times New Roman", serif;
+  font-size: 1em;
+  margin-bottom: 4px;
+}
+
+.horizontal-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 16px 30px rgba(247, 245, 244, 0.911);
+}
+
+.horizontal-card .mat-card-content {
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+
+    margin-top: 70%;
+    margin-bottom: 10%;
+  }
+
+  .horizontal-card {
+    width: 80%; /* Make the card width responsive */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+}
+.card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.horizontal-card {
+  flex: 1;
+  margin: 0 10px;
+  height: 300px; /* Adjust the height as needed */
+}
+.mat-card-content p {
+  margin-bottom: 10px; /* Adjust the spacing between paragraphs */
+  line-height: 2; /* Adjust the line height for better readability */
+}

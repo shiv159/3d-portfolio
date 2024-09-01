@@ -1,0 +1,108 @@
+<div class="canvas-container">
+  <canvas #canvas> </canvas>
+  <div class="overlay">
+    <app-navbar></app-navbar>
+    <mat-card class="skills" appearance="outlined">
+      <mat-card-content>Skills</mat-card-content>
+    </mat-card>
+    <div class="card-container">
+      <mat-card class="my-card-skills">
+        <mat-card-header>
+          <mat-card-title>Backend</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="skill-list">
+          <mat-list role="list">
+            <mat-list-item role="listitem">Spring boot</mat-list-item>
+            <mat-list-item role="listitem">Hibernate</mat-list-item>
+            <mat-list-item role="listitem">MySql</mat-list-item>
+            <mat-list-item role="listitem">Microservices</mat-list-item>
+            <mat-list-item role="listitem">RestApis</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="my-card-skills">
+        <mat-card-header>
+          <mat-card-title>Language</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="skill-list">
+          <mat-list role="list">
+            <mat-list-item role="listitem">Java</mat-list-item>
+            <mat-list-item role="listitem">TypeScript</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="my-card-skills">
+        <mat-card-header>
+          <mat-card-title>FrontEnd</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="skill-list">
+          <mat-list role="list">
+            <mat-list-item role="listitem">Angular</mat-list-item>
+            <mat-list-item role="listitem">HTML</mat-list-item>
+            <mat-list-item role="listitem">CSS</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="my-card-skills">
+        <mat-card-header>
+          <mat-card-title>Cloud</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="skill-list">
+          <mat-list role="list">
+            <mat-list-item role="listitem">Azure</mat-list-item>
+            <mat-list-item role="listitem">AWS</mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <mat-card class="projects" appearance="outlined">
+      <mat-card-content>Projects</mat-card-content>
+    </mat-card>
+    <div class="card-container">
+      @for (project of projects; track $index) {
+      <mat-card class="my-card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>{{ project.name }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img mat-card-image src="{{ project.image }}" alt="Hacker Cat" />
+          <p>{{ project.description }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button>
+            <button>
+              <a mat-stroked-button href="{{ project.url }}">source code</a>
+            </button>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+      }
+      <mat-card class="my-card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>Other Projects</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img
+            mat-card-image
+            src="/assets/projects/programming8.jpg"
+            alt="Hacker Cat"
+          />
+          <p>Source code of other projects</p>
+        </mat-card-content>
+
+        <br />
+        <br />
+        <mat-card-actions>
+          <button>
+            <a mat-stroked-button href="https://github.com/shiv159"
+              >source code</a
+            >
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "DirtyPlay";
+    src: url(/assets/fonts/DirtyPlay.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "MMD";
+    src: url(/assets/fonts/MMD.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "PWC";
+    src: url(/assets/fonts/PWC.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url(/assets/fonts/Regular.ttf) format("truetype");
+}
+
+
+li {
+    font-family: PWC,sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+/* Increase font size for larger screens */
+@media (min-width: 768px) {
+    li {
+        font-size: 24px;
+    }
+}
+
+/* Decrease font size for smaller screens */
+@media (max-width: 480px) {
+    li {
+        font-size: 16px;
+    }
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+a:visited {
+    color: rgb(223, 231, 223);
+    /* Change the color to green */
+    text-decoration: none;                            
+    /* Remove underline */     
+}  
+a {
+    color: rgb(223, 231, 223);
+    /* Change the color to green */
+    text-decoration: none;
+    /* Remove underline */
+}

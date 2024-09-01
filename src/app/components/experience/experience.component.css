@@ -1,0 +1,73 @@
+canvas {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.card-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between cards as needed */
+}
+
+.my-card {
+  flex: 0.5 0.5 25%; /* Allow the card to grow and shrink, and set the base width to 45% */
+  max-height: 800px; /* Set the maximum height */
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow: hidden; /* Hide any overflowing content */
+  background-color: black;
+  color: aliceblue;
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+}
+
+.mat-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding: 16px;
+  text-align: center;
+  color: aliceblue;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  overflow: hidden; /* Hide any overflowing content */
+  background-color: black;
+}
+
+.my-card:hover {
+  transform: translateY(-10px); /* Move the card up slightly */
+  box-shadow: 0 16px 30px rgba(247, 245, 244, 0.911); /* Add a shadow effect */
+}
+
+/* Media query for mobile view */
+@media (max-width: 600px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+  }
+
+  .my-card {
+    width: 80%; /* Make the card width responsive */
+    height: auto; /* Allow the height to adjust based on content */
+    margin: 10px 0; /* Adjust margin for better spacing */
+  }
+
+  .my-card img {
+    height: auto; /* Allow the image height to adjust based on content */
+  }
+}

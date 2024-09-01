@@ -1,0 +1,50 @@
+<div class="canvas-container">
+  <canvas #canvas> </canvas>
+  <div class="overlay">
+    <app-navbar></app-navbar>
+
+    <mat-card class="projects" appearance="outlined">
+      <mat-card-content>Projects</mat-card-content>
+    </mat-card>
+    <div class="card-container">
+      <mat-card class="my-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Small</mat-card-subtitle>
+            <img
+              mat-card-sm-image
+              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+            />
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <p>hbdjwb hj</p>
+        </mat-card-content>
+      </mat-card>
+      <mat-card class="my-card">
+        <mat-card-header>
+          <div mat-card-avatar class="header-image"></div>
+          <mat-card-title>Other Projects</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <img
+            mat-card-image
+            src="/assets/projects/programming8.jpg"
+            alt="Hacker Cat"
+          />
+          <p>Source code of other projects</p>
+        </mat-card-content>
+        <br />
+        <br />
+        <mat-card-actions>
+          <button>
+            <a mat-stroked-button href="https://github.com/shiv159"
+              >source code</a
+            >
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

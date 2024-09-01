@@ -1,0 +1,121 @@
+.canvas-container {
+  position: relative;
+}
+
+canvas {
+  display: block;
+}
+.container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.overlay h1,
+.overlay p {
+  color: white;
+  /* Change this to your desired text color */
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.overlay h1 {
+  font-size: 2em;
+}
+
+.overlay p {
+  font-size: 1em;
+}
+.aboutme {
+  position: relative;
+  top: 55%;
+  /* Adjust this value to place it just below the object */
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px;
+  text-align: center;
+  /* Center the text inside the aboutme section */
+}
+@font-face {
+  font-family: "DirtyPlay";
+  src: url(/assets/fonts/DirtyPlay.ttf) format("truetype");
+}
+@font-face {
+  font-family: "MMD";
+  src: url(/assets/fonts/MMD.ttf) format("truetype");
+}
+@font-face {
+  font-family: "PWC";
+  src: url(/assets/fonts/PWC.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Regular";
+  src: url(/assets/fonts/Regular.ttf) format("truetype");
+}
+
+.p1 {
+  font-family: PWC, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+.p2 {
+  font-family: PWC, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  line-height: 20px;
+}
+.p3 {
+  font-family: PWC, sans-serif;
+  color: white;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.socials {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #0077b5;
+  /* LinkedIn blue */
+}
+
+/* Increase font size for larger screens */
+@media (min-width: 768px) {
+  .p1 {
+    font-size: 20px;
+  }
+  .p2 {
+    font-size: 20px;
+  }
+}
+
+/* Decrease font size for smaller screens */
+@media (max-width: 480px) {
+  .p1 {
+    font-size: 12px;
+  }
+}
