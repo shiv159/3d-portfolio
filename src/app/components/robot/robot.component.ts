@@ -54,17 +54,17 @@ export class RobotComponent {
 
     //particals-----------------------------
     const particalGeometry = new THREE.BufferGeometry();
-    const vertices = 10000;
+    const vertices = 9000;
     const positions = new Float32Array(vertices * 3);
     for (let i = 0; i < vertices * 3; i++) {
-      positions[i] = (Math.random() - 0.5) * 30;
+      positions[i] = (Math.random() - 0.5) * 50;
     }
     particalGeometry.setAttribute(
       "position",
       new THREE.BufferAttribute(positions, 3)
     );
     const particalMaterial = new THREE.PointsMaterial({});
-    particalMaterial.size = 0.009;
+    particalMaterial.size = 0.005;
     particalMaterial.transparent = true;
     //particalMaterial.alphaMap = texture;
     particalMaterial.blendColor = new THREE.Color("white");
@@ -163,13 +163,7 @@ export class RobotComponent {
       if (this.cabeza) {
         this.cabeza.lookAt(lookAt.x, -lookAt.y, 1);
       }
-
-      aspect.width = window.innerWidth;
-      aspect.height = window.innerHeight;
-      camera.aspect = aspect.width / aspect.height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(aspect.width, aspect.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); //for retina display
+      //for retina display
       orbitcontrols.update();
       renderer.render(scene, camera); //render the scene
       composer.render();
@@ -198,5 +192,16 @@ export class RobotComponent {
     // camera.layers.enable(0);
     camera.layers.enableAll();
     animate();
+    window.addEventListener("resize", () => {
+      //update sizes
+      aspect.width = window.innerWidth;
+      aspect.height = window.innerHeight;
+      //update camera
+      camera.aspect = aspect.width / aspect.height;
+      camera.updateProjectionMatrix();
+      //update renderer
+      renderer.setSize(aspect.width, aspect.height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); //for retina display
+    });
   }
 }
